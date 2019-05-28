@@ -5,8 +5,8 @@ const tHead = document.querySelector('thead');
 const tBody = document.querySelector('tbody');
 
 
-tHead.addEventListener('click', (event) => {
-    const th = document.querySelector('th');
+tHead.addEventListener('click', () => {
+    const th = event.target.closest('th');
     const sortData = th.dataset.type;
     const columnNum = th.cellIndex;
     const colRow = [...tBody.children];
